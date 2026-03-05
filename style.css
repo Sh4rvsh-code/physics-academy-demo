@@ -166,12 +166,14 @@ img {
     width: 100%;
     z-index: 1000;
     padding: 16px 0;
-    background-color: var(--white);
+    background-color: rgba(255, 255, 255, 1);
     box-shadow: var(--shadow);
     transition: var(--transition);
 }
 
 #navbar.scrolled {
+    background-color: rgba(255, 255, 255, 0);
+    box-shadow: none;
     padding: 12px 0;
 }
 
