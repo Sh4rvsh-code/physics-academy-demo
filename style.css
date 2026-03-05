@@ -2243,8 +2243,8 @@ footer::before {
 }
 
 /* --- Animations --- */
+/* Make content visible by default; JS only enhances with animations */
 .animate-on-scroll {
-    opacity: 0;
     transition: opacity 0.5s ease-out;
 }
 
@@ -2252,16 +2252,13 @@ footer::before {
     opacity: 1;
 }
 
-.fade-in {
-    opacity: 0;
+.fade-in,
+.slide-up {
+    opacity: 1;
 }
 
 .fade-in.animate {
     animation: fadeIn 0.8s forwards;
-}
-
-.slide-up {
-    opacity: 0;
 }
 
 .slide-up.animate {
