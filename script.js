@@ -164,26 +164,28 @@ document.addEventListener('DOMContentLoaded', () => {
     const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
     const navLinks = document.querySelector('.nav-links');
 
-    mobileMenuBtn.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-        const icon = mobileMenuBtn.querySelector('i');
-        if (navLinks.classList.contains('active')) {
-            icon.classList.replace('fa-bars', 'fa-times');
-            navLinks.style.display = 'flex';
-            navLinks.style.flexDirection = 'column';
-            navLinks.style.position = 'absolute';
-            navLinks.style.top = '70px';
-            navLinks.style.left = '0';
-            navLinks.style.width = '100%';
-            navLinks.style.backgroundColor = 'white';
-            navLinks.style.padding = '40px 20px';
-            navLinks.style.boxShadow = '0 10px 15px rgba(0,0,0,0.1)';
-            navLinks.style.animation = 'slideDown 0.3s ease forwards';
-        } else {
-            icon.classList.replace('fa-times', 'fa-bars');
-            navLinks.style.display = 'none';
-        }
-    });
+    if (mobileMenuBtn && navLinks) {
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            const icon = mobileMenuBtn.querySelector('i');
+            if (navLinks.classList.contains('active')) {
+                icon.classList.replace('fa-bars', 'fa-times');
+                navLinks.style.display = 'flex';
+                navLinks.style.flexDirection = 'column';
+                navLinks.style.position = 'absolute';
+                navLinks.style.top = '70px';
+                navLinks.style.left = '0';
+                navLinks.style.width = '100%';
+                navLinks.style.backgroundColor = 'white';
+                navLinks.style.padding = '40px 20px';
+                navLinks.style.boxShadow = '0 10px 15px rgba(0,0,0,0.1)';
+                navLinks.style.animation = 'slideDown 0.3s ease forwards';
+            } else {
+                icon.classList.replace('fa-times', 'fa-bars');
+                navLinks.style.display = 'none';
+            }
+        });
+    }
 
     // 7. Results Section Tabs
     window.showTab = (tabId) => {
