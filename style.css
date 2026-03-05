@@ -165,32 +165,14 @@ img {
     left: 0;
     width: 100%;
     z-index: 1000;
-    padding: 20px 0;
+    padding: 16px 0;
+    background-color: var(--white);
+    box-shadow: var(--shadow);
     transition: var(--transition);
 }
 
-#navbar:not(.scrolled) .logo a {
-    color: var(--white);
-}
-
-#navbar:not(.scrolled) .nav-links a {
-    color: var(--white);
-    opacity: 0.9;
-}
-
-#navbar:not(.scrolled) .nav-links a:hover {
-    color: var(--accent-color);
-    opacity: 1;
-}
-
-#navbar:not(.scrolled) .mobile-menu-btn {
-    color: var(--white);
-}
-
 #navbar.scrolled {
-    background-color: var(--white);
-    box-shadow: var(--shadow);
-    padding: 10px 0;
+    padding: 12px 0;
 }
 
 #navbar .container {
